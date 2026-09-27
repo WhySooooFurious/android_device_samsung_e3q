@@ -59,3 +59,8 @@ $(call inherit-product, device/samsung/sm8650-common/common.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)
+
+# USB: adb always exposed by default, no auth dialog (userdebug convenience)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0
