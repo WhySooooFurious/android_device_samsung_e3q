@@ -7,4 +7,5 @@
 runtime_resource_overlay {
     name: "SystemUIResE3q",
     device_specific: true,
+    static_libs: ["SystemUI-res"],
 }
