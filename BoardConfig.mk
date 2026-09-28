@@ -7,6 +7,11 @@
 # Include the common OEM chipset BoardConfig.
 include device/samsung/sm8650-common/BoardConfigCommon.mk
 
+# PixelOS base: vendor/lineage infra is only auto-included for lineage_* lunch
+# targets (LINEAGE_BUILD gate in vendor/lineage/build/envsetup.sh). Pull the kernel/soong
+# board config unconditionally so non-lineage products (pixelos_e3q) build the kernel.
+-include vendor/lineage/config/BoardConfigLineage.mk
+
 DEVICE_PATH := device/samsung/e3q
 
 # Assert
