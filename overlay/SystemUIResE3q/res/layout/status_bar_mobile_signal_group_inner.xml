@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-**
-** Copyright 2022, The Android Open Source Project
-**
-** Licensed under the Apache License, Version 2.0 (the "License");
-** you may not use this file except in compliance with the License.
-** You may obtain a copy of the License at
-**
-**     http://www.apache.org/licenses/LICENSE-2.0
-**
-** Unless required by applicable law or agreed to in writing, software
-** distributed under the License is distributed on an "AS IS" BASIS,
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-** See the License for the specific language governing permissions and
-** limitations under the License.
-*/
+  e3q: self-contained override of the A16 bka SystemUI mobile signal group layout.
+  Restores mobile_roaming / mobile_roaming_space views required by
+  MobileIconBinderKairos (removed upstream when roaming moved to
+  mobile_roaming_updated). All resource refs are e3q_-prefixed copies so the
+  static RRO compiles in isolation. status_bar_dot is added programmatically
+  by ModernStatusBarView.initDotView().
 -->
 
 <merge
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:systemui="http://schemas.android.com/apk/res-auto" >
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <com.android.keyguard.AlphaOptimizedLinearLayout
         android:id="@+id/mobile_group"
@@ -30,29 +20,29 @@
 
         <FrameLayout
             android:id="@+id/inout_container"
-            android:layout_height="@dimen/status_bar_mobile_inout_container_size"
+            android:layout_height="@dimen/e3q_status_bar_mobile_inout_container_size"
             android:layout_width="wrap_content"
             android:layout_gravity="center_vertical">
             <ImageView
                 android:id="@+id/mobile_in"
-                android:layout_height="@dimen/status_bar_mobile_signal_size"
+                android:layout_height="@dimen/e3q_status_bar_mobile_signal_size"
                 android:adjustViewBounds="true"
                 android:layout_width="wrap_content"
-                android:src="@drawable/ic_activity_down"
+                android:src="@drawable/e3q_ic_activity_down"
                 android:paddingEnd="2dp"
                 />
             <ImageView
                 android:id="@+id/mobile_out"
-                android:layout_height="@dimen/status_bar_mobile_signal_size"
+                android:layout_height="@dimen/e3q_status_bar_mobile_signal_size"
                 android:adjustViewBounds="true"
                 android:layout_width="wrap_content"
-                android:src="@drawable/ic_activity_up"
+                android:src="@drawable/e3q_ic_activity_up"
                 android:paddingEnd="2dp"
                 />
         </FrameLayout>
         <FrameLayout
             android:id="@+id/mobile_type_container"
-            android:layout_height="@dimen/status_bar_mobile_container_height"
+            android:layout_height="@dimen/e3q_status_bar_mobile_container_height"
             android:layout_width="wrap_content"
             android:layout_marginStart="2.5sp"
             android:layout_marginEnd="1sp"
@@ -60,7 +50,7 @@
             >
             <ImageView
                 android:id="@+id/mobile_type"
-                android:layout_height="@dimen/status_bar_mobile_type_size"
+                android:layout_height="@dimen/e3q_status_bar_mobile_type_size"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:adjustViewBounds="true"
@@ -78,10 +68,9 @@
             android:layout_gravity="center_vertical">
             <com.android.systemui.statusbar.AnimatedImageView
                 android:id="@+id/mobile_signal"
-                android:layout_height="@dimen/status_bar_mobile_signal_size"
+                android:layout_height="@dimen/e3q_status_bar_mobile_signal_size"
                 android:layout_width="wrap_content"
                 android:adjustViewBounds="true"
-                systemui:hasOverlappingRendering="false"
                 />
             <ImageView
                 android:id="@+id/mobile_hd"
@@ -89,34 +78,33 @@
                 android:layout_height="8dp"
                 android:layout_marginTop="1dp"
                 android:layout_gravity="start|top"
-                android:src="@drawable/ic_hd_calling"
+                android:src="@drawable/e3q_ic_hd_calling"
                 android:adjustViewBounds="true"
                 android:gravity="start|top"
                 android:visibility="gone" />
         </FrameLayout>
-        <!-- e3q: restore views required by MobileIconBinderKairos (missing in base layout) -->
         <Space
             android:id="@+id/mobile_roaming_space"
             android:layout_height="match_parent"
-            android:layout_width="@dimen/roaming_icon_start_padding"
+            android:layout_width="@dimen/e3q_roaming_icon_start_padding"
             android:visibility="gone"
             />
         <ImageView
             android:id="@+id/mobile_roaming"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/status_bar_mobile_roam_size"
-            android:layout_marginStart="@dimen/roaming_icon_start_padding"
-            android:src="@drawable/stat_sys_roaming"
-            android:contentDescription="@string/data_connection_roaming"
+            android:layout_height="@dimen/e3q_status_bar_mobile_roam_size"
+            android:layout_marginStart="@dimen/e3q_roaming_icon_start_padding"
+            android:src="@drawable/e3q_stat_sys_roaming"
+            android:contentDescription="@string/e3q_data_connection_roaming"
             android:visibility="gone" />
         <ImageView
             android:id="@+id/mobile_roaming_updated"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/status_bar_mobile_roam_size_updated"
-            android:layout_marginStart="@dimen/status_bar_end_side_roam_icon_margin_start"
+            android:layout_height="@dimen/e3q_status_bar_mobile_roam_size_updated"
+            android:layout_marginStart="@dimen/e3q_status_bar_end_side_roam_icon_margin_start"
             android:layout_marginTop="1sp"
             android:visibility="gone"
-            android:src="@drawable/stat_sys_roaming_updated"
-            android:contentDescription="@string/data_connection_roaming"/>
+            android:src="@drawable/e3q_stat_sys_roaming_updated"
+            android:contentDescription="@string/e3q_data_connection_roaming"/>
     </com.android.keyguard.AlphaOptimizedLinearLayout>
 </merge>

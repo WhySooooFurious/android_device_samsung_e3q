@@ -21,4 +21,13 @@
     <!-- Pixel pitch of the device. um/px -->
     <item name="pixel_pitch" format="float" type="dimen">50.69</item>
 
+    <dimen name="e3q_status_bar_mobile_inout_container_size">17sp</dimen>
+    <dimen name="e3q_status_bar_mobile_signal_size">15sp</dimen>
+    <dimen name="e3q_status_bar_mobile_container_height">18sp</dimen>
+    <dimen name="e3q_status_bar_mobile_type_size">16sp</dimen>
+    <dimen name="e3q_roaming_icon_start_padding">2sp</dimen>
+    <dimen name="e3q_status_bar_mobile_roam_size">8sp</dimen>
+    <dimen name="e3q_status_bar_mobile_roam_size_updated">10sp</dimen>
+    <dimen name="e3q_status_bar_end_side_roam_icon_margin_start">2sp</dimen>
 </resources>
+
