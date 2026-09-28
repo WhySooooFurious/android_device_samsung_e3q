@@ -12,19 +12,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <com.android.keyguard.AlphaOptimizedLinearLayout
-        android:id="@+id/mobile_group"
+        android:id="@id/mobile_group"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
         <FrameLayout
-            android:id="@+id/inout_container"
+            android:id="@id/inout_container"
             android:layout_height="@dimen/e3q_status_bar_mobile_inout_container_size"
             android:layout_width="wrap_content"
             android:layout_gravity="center_vertical">
             <ImageView
-                android:id="@+id/mobile_in"
+                android:id="@id/mobile_in"
                 android:layout_height="@dimen/e3q_status_bar_mobile_signal_size"
                 android:adjustViewBounds="true"
                 android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
                 android:paddingEnd="2dp"
                 />
             <ImageView
-                android:id="@+id/mobile_out"
+                android:id="@id/mobile_out"
                 android:layout_height="@dimen/e3q_status_bar_mobile_signal_size"
                 android:adjustViewBounds="true"
                 android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
                 />
         </FrameLayout>
         <FrameLayout
-            android:id="@+id/mobile_type_container"
+            android:id="@id/mobile_type_container"
             android:layout_height="@dimen/e3q_status_bar_mobile_container_height"
             android:layout_width="wrap_content"
             android:layout_marginStart="2.5sp"
@@ -49,7 +49,7 @@
             android:visibility="gone"
             >
             <ImageView
-                android:id="@+id/mobile_type"
+                android:id="@id/mobile_type"
                 android:layout_height="@dimen/e3q_status_bar_mobile_type_size"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -57,7 +57,7 @@
                 />
         </FrameLayout>
         <Space
-            android:id="@+id/mobile_hd_space"
+            android:id="@id/mobile_hd_space"
             android:layout_height="match_parent"
             android:layout_width="2.5dp"
             android:visibility="gone"
@@ -67,13 +67,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical">
             <com.android.systemui.statusbar.AnimatedImageView
-                android:id="@+id/mobile_signal"
+                android:id="@id/mobile_signal"
                 android:layout_height="@dimen/e3q_status_bar_mobile_signal_size"
                 android:layout_width="wrap_content"
                 android:adjustViewBounds="true"
                 />
             <ImageView
-                android:id="@+id/mobile_hd"
+                android:id="@id/mobile_hd"
                 android:layout_width="12dp"
                 android:layout_height="8dp"
                 android:layout_marginTop="1dp"
@@ -84,13 +84,13 @@
                 android:visibility="gone" />
         </FrameLayout>
         <Space
-            android:id="@+id/mobile_roaming_space"
+            android:id="@id/mobile_roaming_space"
             android:layout_height="match_parent"
             android:layout_width="@dimen/e3q_roaming_icon_start_padding"
             android:visibility="gone"
             />
         <ImageView
-            android:id="@+id/mobile_roaming"
+            android:id="@id/mobile_roaming"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/e3q_status_bar_mobile_roam_size"
             android:layout_marginStart="@dimen/e3q_roaming_icon_start_padding"
@@ -98,7 +98,7 @@
             android:contentDescription="@string/e3q_data_connection_roaming"
             android:visibility="gone" />
         <ImageView
-            android:id="@+id/mobile_roaming_updated"
+            android:id="@id/mobile_roaming_updated"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/e3q_status_bar_mobile_roam_size_updated"
             android:layout_marginStart="@dimen/e3q_status_bar_end_side_roam_icon_margin_start"

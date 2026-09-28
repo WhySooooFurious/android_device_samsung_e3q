@@ -7,5 +7,5 @@
 runtime_resource_overlay {
     name: "SystemUIResE3q",
     device_specific: true,
-    static_libs: ["SystemUI-res"],
+    aaptflags: ["--stable-ids", "device/samsung/e3q/overlay/SystemUIResE3q/stable-ids.txt"],
 }
