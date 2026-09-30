@@ -33,8 +33,11 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     FrameworksResE3q \
     LineageResE3q \
-    SystemUIResE3q \
     WifiResTargetE3q
+
+PRODUCT_PACKAGES += \
+    OpenEUICC \
+    imsstack-carrier-config-ext
 
 # Power
 PRODUCT_COPY_FILES += \
