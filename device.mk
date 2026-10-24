@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     OpenEUICC \
-    imsstack-carrier-config-ext
 
 # Power
 PRODUCT_COPY_FILES += \
