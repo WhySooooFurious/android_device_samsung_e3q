@@ -7,4 +7,5 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_e3q.mk \
     $(LOCAL_DIR)/evolution_e3q.mk \
-    $(LOCAL_DIR)/pixelos_e3q.mk
+    $(LOCAL_DIR)/pixelos_e3q.mk \
+    $(LOCAL_DIR)/crdroid_e3q.mk
