@@ -75,4 +75,4 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 include vendor/samsung/e3q/BoardConfigVendor.mk
 
 # SuperiorOS: export kernel Kati vars to soong (superiorVarsPlugin) for inline-kernel header modules
-include vendor/superior/config/BoardConfigSuperior.mk
+-include vendor/superior/config/BoardConfigSuperior.mk
