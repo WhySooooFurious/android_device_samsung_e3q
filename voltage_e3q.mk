@@ -21,3 +21,9 @@ PRODUCT_MODEL := SM-S928B
 PRODUCT_MANUFACTURER := Samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# The public voltage-priv template repo sets PRODUCT_CERTIFICATE_OVERRIDES
+# (apex -> <apex>.certificate.override) but ships no .bp defining those
+# modules, which fails soong module resolution. Clear the list so apexes
+# fall back to their default certificates.
+PRODUCT_CERTIFICATE_OVERRIDES :=
