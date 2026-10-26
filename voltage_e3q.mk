@@ -34,4 +34,5 @@ PRODUCT_CERTIFICATE_OVERRIDES :=
 PRODUCT_PACKAGES := $(filter-out framework_compatibility_matrix.lineage.xml,$(PRODUCT_PACKAGES))
 
 # Unofficial builds need adb without per-host authorization dialog.
-PRODUCT_PROPERTY_OVERRIDES += ro.adb.secure=0
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES := $(filter-out ro.adb.secure=1,$(PRODUCT_SYSTEM_DEFAULT_PROPERTIES))
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
