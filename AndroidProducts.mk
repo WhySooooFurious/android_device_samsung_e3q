@@ -11,3 +11,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/crdroid_e3q.mk \
     $(LOCAL_DIR)/voltage_e3q.mk \
     $(LOCAL_DIR)/superioros_e3q.mk
+    $(LOCAL_DIR)/e_e3q.mk
