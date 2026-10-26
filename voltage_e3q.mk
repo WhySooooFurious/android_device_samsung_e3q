@@ -33,6 +33,4 @@ PRODUCT_CERTIFICATE_OVERRIDES :=
 # provides none of them, which fails the boot-time VINTF check (stuck at boot logo).
 PRODUCT_PACKAGES := $(filter-out framework_compatibility_matrix.lineage.xml,$(PRODUCT_PACKAGES))
 
-# Unofficial builds need adb without per-host authorization dialog.
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES := $(filter-out ro.adb.secure=1,$(PRODUCT_SYSTEM_DEFAULT_PROPERTIES))
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
+
