@@ -32,7 +32,7 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     FrameworksResE3q \
     LineageResE3q \
-    SystemUIResE3q \
+\
     WifiResTargetE3q
 
 # Power
