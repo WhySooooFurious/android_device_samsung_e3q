@@ -18,6 +18,9 @@ $(call inherit-product, device/samsung/e3q/device.mk)
 # Inherit from the DerpFest configuration (derpfest.mk pulls in GMS).
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Keep OpenEUICC in and the stock Google eSIM app out.
+PRODUCT_PACKAGES := $(filter-out EuiccGoogle,$(PRODUCT_PACKAGES))
+
 PRODUCT_NAME := derpfest_e3q
 PRODUCT_DEVICE := e3q
 PRODUCT_BRAND := samsung
