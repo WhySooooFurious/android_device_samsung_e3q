@@ -9,4 +9,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/derpfest_e3q.mk \
     $(LOCAL_DIR)/evolution_e3q.mk \
     $(LOCAL_DIR)/pixelos_e3q.mk \
-    $(LOCAL_DIR)/crdroid_e3q.mk
+    $(LOCAL_DIR)/crdroid_e3q.mk \
+    $(LOCAL_DIR)/crdroid_e3q_vanilla.mk
