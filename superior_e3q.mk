@@ -19,9 +19,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/samsung/e3q/device.mk)
 
-# Inherit from the SuperiorOS configuration (common.mk pulls in the
-# SuperiorOS apps + gapps wiring via WITH_GAPPS).
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit from the full SuperiorOS phone configuration (the chain:
+# common_full_phone.mk -> common_mobile_full.mk -> common_mobile.mk ->
+# common.mk). common.mk alone misses the ROM app set, the AOSP/Superior
+# sound files, the default sound properties and telephony.mk.
+$(call inherit-product, vendor/superior/config/common_full_phone.mk)
 
 # Keep OpenEUICC in and the stock Google eSIM app out (the Exynoobs 24.0
 # vendor packages EuiccGoogle; the effective filter-out sits at the end of

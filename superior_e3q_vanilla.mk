@@ -17,9 +17,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/samsung/e3q/device.mk)
 
-# Inherit from the SuperiorOS configuration (no GMS: no WITH_GAPPS;
-# SuperiorOS's common.mk gapps wiring stays a no-op without it).
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit from the full SuperiorOS phone configuration (the chain:
+# common_full_phone.mk -> common_mobile_full.mk -> common_mobile.mk ->
+# common.mk; no GMS: no WITH_GAPPS, the common.mk gapps wiring stays a
+# no-op without it).
+$(call inherit-product, vendor/superior/config/common_full_phone.mk)
 
 # Keep OpenEUICC in and the stock Google eSIM app out.
 PRODUCT_PACKAGES := $(filter-out EuiccGoogle,$(PRODUCT_PACKAGES))
