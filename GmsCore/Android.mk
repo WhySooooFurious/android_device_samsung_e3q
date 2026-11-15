@@ -32,7 +32,15 @@ LOCAL_SRC_FILES := $(LOCAL_MODULE)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+# Only build the GmsCore app when this variant wants the partner GMS stack.
+# Other variants (e.g. FDE GApps) define their own GmsCore module, and kati's
+# module registry is global across all product makefile chains, so both
+# definitions collide without this guard.
+ifneq ($(PARTNER_GMS_ENABLE_GMSCORE),true)
+LOCAL_MODULE := GmsCore_partner_gms
+else
 LOCAL_MODULE := GmsCore
+endif
 LOCAL_SRC_FILES := GmsCore.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRODUCT_MODULE := true
