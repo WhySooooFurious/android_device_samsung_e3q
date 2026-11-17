@@ -68,3 +68,8 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Include the proprietary files BoardConfig.
 include vendor/samsung/e3q/BoardConfigVendor.mk
+
+# Include the LineageOS kernel build config and export the kernel
+# soong config vars (used by vendor/lineage generated_kernel_includes).
+include vendor/lineage/config/BoardConfigKernel.mk
+include vendor/lineage/config/BoardConfigSoong.mk
