@@ -1,3 +1,7 @@
+
+# QCOM common (inherited via aospa-target.mk) requires the platform
+# before BoardConfig is parsed; keep in sync with BoardConfigCommon.mk.
+TARGET_BOARD_PLATFORM := pineapple
 #
 # Copyright (C) 2024 The LineageOS Project
 #
